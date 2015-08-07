@@ -6,7 +6,7 @@ var exchangeName = 'events';
 var queueName = 'events';
 var routingKey = 'events';
 
-var context = rabbit.createContext();
+var context = rabbit.createContext('amqp://127.0.0.1');
 context.on('ready', function () {
     var publisher = context.socket('PUBLISH');
     var subscriber = context.socket('SUBSCRIBE');

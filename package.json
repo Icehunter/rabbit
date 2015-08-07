@@ -1,7 +1,7 @@
 {
     "name": "@icehunter/rabbit",
     "description": "Easy stream-based messaging using RabbitMQ",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "homepage": "http://github.com/icehunter/rabbit",
     "repository": {
         "type": "git",

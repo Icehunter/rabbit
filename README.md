@@ -13,6 +13,8 @@ var exchangeName = 'events';
 var queueName = 'events';
 var routingKey = 'events';
 
+// url: amqp(s)://127.0.0.1
+// var context = rabbit.createContext(url, connectionOptions);
 var context = rabbit.createContext();
 context.on('ready', function () {
     var publisher = context.socket('PUBLISH');
@@ -57,6 +59,8 @@ var newRoutingKey = 'events:new';
 var updateQueueName = 'events:update';
 var updateRoutingKey = 'events:update';
 
+// url: amqp(s)://127.0.0.1
+// var context = rabbit.createContext(url, connectionOptions);
 var context = rabbit.createContext();
 context.on('ready', function () {
     var publisher = context.socket('PUBLISH');
