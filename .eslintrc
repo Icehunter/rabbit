@@ -1,0 +1,28 @@
+{
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "rules": {
+        "indent": 2,
+        "strict": [2, "global"],
+        "wrap-iife": [2, "inside"],
+        "quotes": [2, "single"],
+        "no-undefined": 1,
+        "no-underscore-dangle": 0,
+        "no-process-exit": 2,
+        "camelcase": 1,
+        "dot-notation": [2, {
+            "allowKeywords": false,
+            "allowPattern": "^[a-z]+(_[a-z]+)+$"
+        }],
+        "no-shadow": 0,
+        "complexity": [1, 8],
+        "no-extra-parens": 2,
+        "no-process-exit": 0
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "jasmine": true
+    }
+}

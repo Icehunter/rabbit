@@ -1,0 +1,23 @@
+{
+    "name": "@icehunter/rabbit",
+    "description": "Easy stream-based messaging using RabbitMQ",
+    "version": "0.1.0",
+    "homepage": "http://github.com/icehunter/rabbit",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/icehunter/rabbit.git"
+    },
+    "author": "Ryan Wilson <syndicated.life@gmail.com>",
+    "contributors": [{
+        "name": "Michael Bridgen",
+        "email": "mikeb@squaremobius.net"
+    }],
+    "directories": {
+        "lib": "lib"
+    },
+    "main": "./index",
+    "dependencies": {
+        "amqplib": "^0.3.2",
+        "readable-stream": "^2.0.2"
+    }
+}
