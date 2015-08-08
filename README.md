@@ -17,10 +17,10 @@ var routingKey = 'events';
 // var context = rabbit.createContext(url, connectionOptions);
 var context = rabbit.createContext();
 context.on('ready', function () {
-    var publisher = context.socket('PUBLISH');
-    var subscriber = context.socket('SUBSCRIBE');
-    // var subscriber = context.socket('SUBSCRIBE', [options]);,
-    // options for SUBSCRIBE
+    var publisher = context.socket('PUBLISHTOPIC');
+    var subscriber = context.socket('SUBSCRIBETOPIC');
+    // var subscriber = context.socket('SUBSCRIBETOPIC', [options]);,
+    // options for SUBSCRIBETOPIC
     //     noAck: bool (true means it will process as fast as it can), default: false, must always ack
     //     prefetch: # how many messages to pickup before waiting until processing is done, default: unlimited
     subscriber.connect(exchangeName, queueName, routingKey, function () {
@@ -63,10 +63,10 @@ var updateRoutingKey = 'events:update';
 // var context = rabbit.createContext(url, connectionOptions);
 var context = rabbit.createContext();
 context.on('ready', function () {
-    var publisher = context.socket('PUBLISH');
-    var newSubscriber = context.socket('SUBSCRIBE');
-    // var newSubscriber = context.socket('SUBSCRIBE', [options]);,
-    // options for SUBSCRIBE
+    var publisher = context.socket('PUBLISHTOPIC');
+    var newSubscriber = context.socket('SUBSCRIBETOPIC');
+    // var newSubscriber = context.socket('SUBSCRIBETOPIC', [options]);,
+    // options for SUBSCRIBETOPIC
     //     noAck: bool (true means it will process as fast as it can), default: false, must always ack
     //     prefetch: # how many messages to pickup before waiting until processing is done, default: unlimited
     newSubscriber.connect(exchangeName, newQueueName, newRoutingKey, function () {
@@ -76,9 +76,9 @@ context.on('ready', function () {
             console.log(message);
         });
     });
-    var updateSubscriber = context.socket('SUBSCRIBE');
-    // var updateSubscriber = context.socket('SUBSCRIBE', [options]);,
-    // options for SUBSCRIBE
+    var updateSubscriber = context.socket('SUBSCRIBETOPIC');
+    // var updateSubscriber = context.socket('SUBSCRIBETOPIC', [options]);,
+    // options for SUBSCRIBETOPIC
     //     noAck: bool (true means it will process as fast as it can), default: false, must always ack
     //     prefetch: # how many messages to pickup before waiting until processing is done, default: unlimited
     updateSubscriber.connect(exchangeName, updateQueueName, updateRoutingKey, function () {
